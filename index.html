@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,8 +10,8 @@
 :root {
   --m:       #7211C6;
   --m2:      #9B3FE8;
-  --m-pale:  #F3E8FD;
-  --m-light: #EAD5FA;
+  --m-pale:  #2A0A4A;
+  --m-light: #3D1566;
   --m-mid:   #C078F0;
   --white:   #ffffff;
   --off:     #FAF8FC;
@@ -26,59 +27,58 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body {
-  background: var(--bg);
-  font-family: 'EB Garamond', serif;
-  color: var(--dark);
-  min-height: 100vh;
-  padding: 32px 16px 80px;
+background: var(–bg);
+font-family: ‘EB Garamond’, serif;
+color: var(–dark);
+min-height: 100vh;
+padding: 32px 16px 80px;
 }
 
 .wrap { max-width: 720px; margin: 0 auto; }
 
 /* ── HEADER ── */
 .hdr {
-  background: linear-gradient(150deg, #7211C6 0%, #9B3FE8 45%, #5A0FA0 100%)
-);
-  border-radius: 8px 8px 0 0;
-  padding: 44px 40px 32px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(180,130,0,.22);
+background: linear-gradient(150deg, #7211C6 0%, #9B3FE8 45%, #5A0FA0 100%);
+border-radius: 8px 8px 0 0;
+padding: 44px 40px 32px;
+text-align: center;
+position: relative;
+overflow: hidden;
+box-shadow: 0 8px 32px rgba(114,17,198,.35);
 }
 .hdr::after {
-  content:'';position:absolute;inset:0;
-  background: radial-gradient(ellipse at 50% -10%, rgba(255,255,255,.2) 0%, transparent 60%);
-  pointer-events:none;
+content:’’;position:absolute;inset:0;
+background: radial-gradient(ellipse at 50% -10%, rgba(255,255,255,.2) 0%, transparent 60%);
+pointer-events:none;
 }
 .hdr-icon { font-size:48px; display:block; margin-bottom:12px; animation: bob 4s ease-in-out infinite alternate; }
 @keyframes bob{ from{transform:translateY(0)} to{transform:translateY(-6px)} }
 .hdr h1 {
-  font-family:'Cinzel Decorative',cursive;
-  font-size: clamp(19px,4vw,26px);
-  color:#fff; letter-spacing:.06em; line-height:1.3;
-  text-shadow:0 2px 6px rgba(0,0,0,.18);
-  margin-bottom:5px; position:relative;
+font-family:‘Cinzel Decorative’,cursive;
+font-size: clamp(19px,4vw,26px);
+color:#fff; letter-spacing:.06em; line-height:1.3;
+text-shadow:0 2px 6px rgba(0,0,0,.18);
+margin-bottom:5px; position:relative;
 }
 .hdr .sub {
-  font-family:'Cinzel',serif; font-size:11px;
-  letter-spacing:.28em; text-transform:uppercase;
-  color:rgba(255,255,255,.78); position:relative;
+font-family:‘Cinzel’,serif; font-size:11px;
+letter-spacing:.28em; text-transform:uppercase;
+color:rgba(255,255,255,.78); position:relative;
 }
 .hdr-line {
-  display:flex; align-items:center; gap:10px;
-  margin:18px 0; position:relative;
+display:flex; align-items:center; gap:10px;
+margin:18px 0; position:relative;
 }
-.hdr-line::before,.hdr-line::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.3)}
+.hdr-line::before,.hdr-line::after{content:’’;flex:1;height:1px;background:rgba(255,255,255,.3)}
 .hdr-line span{color:rgba(255,255,255,.6);font-size:14px}
 .hdr p {
-  font-size:15px; line-height:1.8; font-style:normal;
-  color:rgba(255,255,255,.88); position:relative;
+font-size:15px; line-height:1.8; font-style:normal;
+color:rgba(255,255,255,.88); position:relative;
 }
 .hdr .req-note {
-  margin-top:14px; font-family:'Cinzel',serif;
-  font-size:11px; letter-spacing:.06em;
-  color:rgba(255,255,255,.6); position:relative;
+margin-top:14px; font-family:‘Cinzel’,serif;
+font-size:11px; letter-spacing:.06em;
+color:rgba(255,255,255,.6); position:relative;
 }
 .hdr .req-note b { color:#fff; }
 
@@ -88,149 +88,151 @@ body {
 
 /* ── CARDS ── */
 .card {
-  background:var(--white);
-  border:1px solid rgba(201,150,10,.13);
-  border-top:none;
-  padding:30px 36px;
-  box-shadow:0 2px 10px rgba(180,130,0,.08);
+background:var(–white);
+border:1px solid rgba(114,17,198,.13);
+border-top:none;
+padding:30px 36px;
+box-shadow:0 2px 10px rgba(114,17,198,.08);
 }
-.card:last-of-type { border-radius:0 0 8px 8px; border-bottom:2px solid var(--m-mid); }
+.card:last-of-type { border-radius:0 0 8px 8px; border-bottom:2px solid var(–m-mid); }
 
 .sec-head {
-  font-family:'Cinzel',serif; font-size:10.5px;
-  letter-spacing:.28em; text-transform:uppercase;
-  color:var(--m); margin-bottom:22px;
-  padding-bottom:9px;
-  border-bottom:1.5px solid var(--m-light);
-  display:flex; align-items:center; gap:8px;
+font-family:‘Cinzel’,serif; font-size:10.5px;
+letter-spacing:.28em; text-transform:uppercase;
+color:var(–m); margin-bottom:22px;
+padding-bottom:9px;
+border-bottom:1.5px solid var(–border);
+display:flex; align-items:center; gap:8px;
 }
 .sec-head .ico { font-size:16px; }
 
 /* ── FIELD ── */
 .field { margin-bottom:22px; }
 label {
-  display:block; font-family:'Cinzel',serif;
-  font-size:12.5px; color:var(--dark);
-  margin-bottom:8px; letter-spacing:.02em;
+display:block; font-family:‘Cinzel’,serif;
+font-size:12.5px; color:var(–dark);
+margin-bottom:8px; letter-spacing:.02em;
 }
-label .r { color:var(--red); margin-left:2px; }
+label .r { color:var(–red); margin-left:2px; }
 label .sub-hint {
-  display:block; font-family:'EB Garamond',serif;
-  font-size:12.5px; color:var(--hint);
-  font-style:normal; margin-top:2px;
-  letter-spacing:0; font-weight:400;
+display:block; font-family:‘EB Garamond’,serif;
+font-size:12.5px; color:var(–hint);
+font-style:normal; margin-top:2px;
+letter-spacing:0; font-weight:400;
 }
 
 .two { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
 @media(max-width:540px){ .two{grid-template-columns:1fr} }
 
 input[type=text],input[type=email],input[type=tel],textarea,select {
-  width:100%; background:var(--off);
-  border:1.5px solid var(--border); border-radius:4px;
-  color:var(--dark); font-family:'EB Garamond',serif;
-  font-size:16px; padding:10px 14px; outline:none;
-  transition:border-color .2s, box-shadow .2s, background .2s;
+width:100%; background:var(–off);
+border:1.5px solid var(–border); border-radius:4px;
+color:var(–dark); font-family:‘EB Garamond’,serif;
+font-size:16px; padding:10px 14px; outline:none;
+transition:border-color .2s, box-shadow .2s, background .2s;
 }
 input:focus,textarea:focus,select:focus {
-  border-color:var(--m); background:#fff;
-  box-shadow:0 0 0 3px rgba(201,150,10,.1);
+border-color:var(–m); background:#fff;
+box-shadow:0 0 0 3px rgba(114,17,198,.15);
 }
-input::placeholder,textarea::placeholder{color:#c4a84a}
+input::placeholder,textarea::placeholder { color:#9B6FCC; }
 textarea{resize:vertical;min-height:90px;line-height:1.65}
 select {
-  appearance:none; cursor:pointer;
-  background-image:url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%23c9960a' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat; background-position:right 13px center; padding-right:36px;
+appearance:none; cursor:pointer;
+background-image:url(“data:image/svg+xml,%3Csvg width=‘11’ height=‘7’ viewBox=‘0 0 11 7’ fill=‘none’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cpath d=‘M1 1L5.5 6L10 1’ stroke=’%237211C6’ stroke-width=‘1.6’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
+background-repeat:no-repeat; background-position:right 13px center; padding-right:36px;
 }
-select option{background:#fff;color:var(--dark)}
+select option{background:#fff;color:var(–dark)}
 
 /* ── CATEGORY ACCORDION ── */
-.cat-block { border:1.5px solid #ead870; border-radius:5px; margin-bottom:9px; overflow:hidden; }
+.cat-block { border:1.5px solid #C078F0; border-radius:5px; margin-bottom:9px; overflow:hidden; }
 .cat-hdr {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:12px 15px; cursor:pointer;
-  background:var(--m-light); transition:background .15s; user-select:none;
+display:flex; align-items:center; justify-content:space-between;
+padding:12px 15px; cursor:pointer;
+background:#EAD5FA; transition:background .15s; user-select:none;
 }
-.cat-hdr:hover{background:#faeea5}
+.cat-hdr:hover { background:#D4A8F5; }
 .cat-hdr-left { display:flex; align-items:center; gap:8px; }
-.cat-hdr-title { font-family:'Cinzel',serif; font-size:11.5px; color:var(--dark); letter-spacing:.05em; }
-.cat-hdr-count { font-family:'EB Garamond',serif; font-size:12px; color:var(--hint); font-style:normal; }
-.cat-arrow { color:var(--m); font-size:11px; transition:transform .25s; }
+.cat-hdr-title { font-family:‘Cinzel’,serif; font-size:11.5px; color:var(–dark); letter-spacing:.05em; }
+.cat-hdr-count { font-family:‘EB Garamond’,serif; font-size:12px; color:var(–hint); font-style:normal; }
+.cat-arrow { color:var(–m); font-size:11px; transition:transform .25s; }
 .cat-block.open .cat-arrow { transform:rotate(180deg); }
-.cat-body { display:none; padding:6px 14px 14px; background:#fff; border-top:1px solid #f0e498; }
+.cat-body { display:none; padding:6px 14px 14px; background:#fff; border-top:1px solid #C078F0; }
 .cat-block.open .cat-body { display:block; }
 .course-grid {
-  display:grid; grid-template-columns:repeat(auto-fill, minmax(190px,1fr));
-  gap:6px; margin-top:8px;
+display:grid; grid-template-columns:repeat(auto-fill, minmax(190px,1fr));
+gap:6px; margin-top:8px;
 }
 @media(max-width:480px){ .course-grid{grid-template-columns:1fr} }
 
 /* ── CHECKBOX ITEMS ── */
 .cb-item {
-  display:flex; align-items:flex-start; gap:9px;
-  padding:8px 11px; border:1.5px solid #ede5b0; border-radius:4px;
-  cursor:pointer; transition:all .15s; background:var(--off); user-select:none;
+display:flex; align-items:flex-start; gap:9px;
+padding:8px 11px; border:1.5px solid #C8A8F0; border-radius:4px;
+cursor:pointer; transition:all .15s; background:var(–off); user-select:none;
 }
-.cb-item:hover{border-color:var(--m2);background:var(--m-light)}
-.cb-item.on{border-color:var(--m);background:var(--m-light)}
+.cb-item:hover { border-color:var(–m2); background:#EAD5FA; }
+.cb-item.on { border-color:var(–m); background:#EAD5FA; }
 .cb-item input{display:none}
 .cb-box {
-  width:16px;height:16px;min-width:16px;
-  border:1.5px solid #d0b030; border-radius:3px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:700;color:#fff;
-  background:#fff; margin-top:2px; transition:all .15s;
+width:16px;height:16px;min-width:16px;
+border:1.5px solid #9B3FE8; border-radius:3px;
+display:flex;align-items:center;justify-content:center;
+font-size:10px;font-weight:700;color:#fff;
+background:#fff; margin-top:2px; transition:all .15s;
 }
-.cb-item.on .cb-box { background:var(--m); border-color:var(--m); }
-.cb-txt { font-family:'EB Garamond',serif; font-size:14.5px; color:var(--mid); line-height:1.35; }
+.cb-item.on .cb-box { background:var(–m); border-color:var(–m); }
+.cb-txt { font-family:‘EB Garamond’,serif; font-size:14.5px; color:var(–mid); line-height:1.35; }
 
 /* ── SUBMIT ── */
 .submit-area { text-align:center; padding:32px 0 12px; }
 .btn {
-  background:linear-gradient(135deg,#b8840a,#e0b020 60%,#c49010);
-  border:none; color:#fff;
-  font-family:'Cinzel',serif; font-size:12.5px;
-  letter-spacing:.22em; text-transform:uppercase;
-  padding:15px 50px; cursor:pointer; border-radius:5px;
-  box-shadow:0 4px 18px rgba(180,130,0,.3);
-  transition:all .25s;
+background: linear-gradient(135deg, #5A0FA0, #9B3FE8 60%, #6A15B8);
+border:none; color:#fff;
+font-family:‘Cinzel’,serif; font-size:12.5px;
+letter-spacing:.22em; text-transform:uppercase;
+padding:15px 50px; cursor:pointer; border-radius:5px;
+box-shadow:0 4px 18px rgba(114,17,198,.35);
+transition:all .25s;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(180,130,0,.38)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(114,17,198,.5)}
 .btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.form-foot { font-family:'Cinzel',serif; font-size:10px; letter-spacing:.15em; color:var(--hint); margin-top:10px; }
+.form-foot { font-family:‘Cinzel’,serif; font-size:10px; letter-spacing:.15em; color:var(–hint); margin-top:10px; }
 
 /* ── TOAST ── */
 .toast {
-  position:fixed;bottom:28px;left:50%;
-  transform:translateX(-50%) translateY(70px);
-  background:var(--dark);color:#fff;
-  font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.08em;
-  padding:11px 26px;border-radius:4px;
-  box-shadow:0 8px 24px rgba(0,0,0,.2);
-  z-index:9999;opacity:0;transition:all .3s ease;
+position:fixed;bottom:28px;left:50%;
+transform:translateX(-50%) translateY(70px);
+background:var(–dark);color:#fff;
+font-family:‘Cinzel’,serif;font-size:11.5px;letter-spacing:.08em;
+padding:11px 26px;border-radius:4px;
+box-shadow:0 8px 24px rgba(0,0,0,.2);
+z-index:9999;opacity:0;transition:all .3s ease;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── SUCCESS ── */
 .success {
-  display:none;text-align:center;
-  padding:64px 36px;background:var(--white);
-  border:1.5px solid var(--m-mid);border-radius:8px;
-  box-shadow:0 4px 24px rgba(180,130,0,.1);
+display:none;text-align:center;
+padding:64px 36px;background:var(–white);
+border:1.5px solid var(–m-mid);border-radius:8px;
+box-shadow:0 4px 24px rgba(114,17,198,.1);
 }
 .success .ico2{font-size:60px;margin-bottom:16px;animation:bob 4s ease-in-out infinite alternate}
-.success h2{font-family:'Cinzel Decorative',cursive;color:var(--m);font-size:21px;margin-bottom:10px}
+.success h2{font-family:‘Cinzel Decorative’,cursive;color:var(–m);font-size:21px;margin-bottom:10px}
 .success .s-line{display:flex;align-items:center;gap:10px;margin:14px 0}
-.success .s-line::before,.success .s-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--m-mid),transparent)}
-.success .s-line span{color:var(--m)}
-.success p{color:var(--mid);font-size:16px;line-height:1.8;font-style:normal}
+.success .s-line::before,.success .s-line::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,transparent,var(–m-mid),transparent)}
+.success .s-line span{color:var(–m)}
+.success p{color:var(–mid);font-size:16px;line-height:1.8;font-style:normal}
 </style>
+
 </head>
 <body>
 <div class="wrap">
 
 <!-- HEADER -->
+
 <div class="hdr">
   <span class="hdr-icon"></span>
   <h1>Occult Gurukul</h1>
@@ -244,6 +246,7 @@ select option{background:#fff;color:var(--dark)}
 <form id="form" novalidate>
 
 <!-- 1 · BASIC DETAILS -->
+
 <div class="card">
   <div class="sec-head"><span class="ico">☽</span> Your Details</div>
 
@@ -289,8 +292,8 @@ select option{background:#fff;color:var(--dark)}
   </div>
 </div>
 
-
 <!-- 2 · COURSES -->
+
 <div class="card">
   <div class="sec-head"><span class="ico"></span> Which Courses Can You Teach?
     <span style="margin-left:auto;font-family:'EB Garamond',serif;font-size:12px;color:var(--hint);font-style:normal;font-weight:400;letter-spacing:0;text-transform:none;">Select all that apply</span>
@@ -298,6 +301,7 @@ select option{background:#fff;color:var(--dark)}
   <p style="font-size:14px;color:var(--soft);font-style:normal;margin-bottom:16px;">Tap a category to expand it, then tick every topic you're confident teaching.</p>
 
   <!-- PURE ASTROLOGY -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">♈</span><span class="cat-hdr-title">Pure Astrology</span><span class="cat-hdr-count">&nbsp;· 100 courses</span></div>
@@ -306,7 +310,6 @@ select option{background:#fff;color:var(--dark)}
     <div class="cat-body">
       <p style="font-size:12px;color:var(--hint);font-style:normal;margin-bottom:4px;">Foundations · Chart Reading · Dashas · Divisional Charts · Jaimini · Yogas & Doshas · Muhurat · Prashna</p>
       <div class="course-grid">
-        <!-- Foundations 1-15 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Astrology Basics"><div class="cb-box"></div><span class="cb-txt">Astrology Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="12 Houses Deep Dive"><div class="cb-box"></div><span class="cb-txt">12 Houses Deep Dive</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="12 Signs Psychology"><div class="cb-box"></div><span class="cb-txt">12 Signs Psychology</span></div>
@@ -322,7 +325,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Stellium Meaning"><div class="cb-box"></div><span class="cb-txt">Stellium Meaning</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Elements & Modalities"><div class="cb-box"></div><span class="cb-txt">Elements & Modalities</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Chart Structure Basics"><div class="cb-box"></div><span class="cb-txt">Chart Structure Basics</span></div>
-        <!-- Chart Reading 16-30 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="How to Read Any Chart"><div class="cb-box"></div><span class="cb-txt">How to Read Any Chart</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Lagna-Based Interpretation"><div class="cb-box"></div><span class="cb-txt">Lagna-Based Interpretation</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Multi-Chart Synthesis"><div class="cb-box"></div><span class="cb-txt">Multi-Chart Synthesis</span></div>
@@ -338,7 +340,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Planet Dominance"><div class="cb-box"></div><span class="cb-txt">Planet Dominance</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Weak Planet Fix"><div class="cb-box"></div><span class="cb-txt">Weak Planet Fix</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Chart Correction Techniques"><div class="cb-box"></div><span class="cb-txt">Chart Correction Techniques</span></div>
-        <!-- Dashas 31-45 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Vimshottari Dasha"><div class="cb-box"></div><span class="cb-txt">Vimshottari Dasha</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Yogini Dasha"><div class="cb-box"></div><span class="cb-txt">Yogini Dasha</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Chara Dasha"><div class="cb-box"></div><span class="cb-txt">Chara Dasha</span></div>
@@ -354,7 +355,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Venus Mahadasha"><div class="cb-box"></div><span class="cb-txt">Venus Mahadasha</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Mars Mahadasha"><div class="cb-box"></div><span class="cb-txt">Mars Mahadasha</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jupiter Mahadasha"><div class="cb-box"></div><span class="cb-txt">Jupiter Mahadasha</span></div>
-        <!-- Divisional Charts 46-60 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Navamsa (D9)"><div class="cb-box"></div><span class="cb-txt">Navamsa (D9)</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Dashamsa (D10)"><div class="cb-box"></div><span class="cb-txt">Dashamsa (D10)</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Saptamsa (D7)"><div class="cb-box"></div><span class="cb-txt">Saptamsa (D7)</span></div>
@@ -370,7 +370,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Childbirth via D7"><div class="cb-box"></div><span class="cb-txt">Childbirth via D7</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Spiritual Charts"><div class="cb-box"></div><span class="cb-txt">Spiritual Charts</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Advanced Vargas"><div class="cb-box"></div><span class="cb-txt">Advanced Vargas</span></div>
-        <!-- Jaimini 61-70 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Basics"><div class="cb-box"></div><span class="cb-txt">Jaimini Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Karakas"><div class="cb-box"></div><span class="cb-txt">Karakas</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Raj Yogas"><div class="cb-box"></div><span class="cb-txt">Jaimini Raj Yogas</span></div>
@@ -379,7 +378,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Aspects"><div class="cb-box"></div><span class="cb-txt">Jaimini Aspects</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Career via Jaimini"><div class="cb-box"></div><span class="cb-txt">Career via Jaimini</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini + Parashara"><div class="cb-box"></div><span class="cb-txt">Jaimini + Parashara</span></div>
-        <!-- Yogas & Doshas 71-80 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Raj Yogas"><div class="cb-box"></div><span class="cb-txt">Raj Yogas</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Dhan Yogas"><div class="cb-box"></div><span class="cb-txt">Dhan Yogas</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Vipreet Raj Yoga"><div class="cb-box"></div><span class="cb-txt">Vipreet Raj Yoga</span></div>
@@ -390,7 +388,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Pitru Dosha"><div class="cb-box"></div><span class="cb-txt">Pitru Dosha</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Guru Chandal"><div class="cb-box"></div><span class="cb-txt">Guru Chandal</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Daridra Yoga"><div class="cb-box"></div><span class="cb-txt">Daridra Yoga</span></div>
-        <!-- Muhurat 81-90 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Muhurat Basics"><div class="cb-box"></div><span class="cb-txt">Muhurat Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Marriage Muhurat"><div class="cb-box"></div><span class="cb-txt">Marriage Muhurat</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Business Muhurat"><div class="cb-box"></div><span class="cb-txt">Business Muhurat</span></div>
@@ -401,7 +398,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Griha Pravesh Muhurat"><div class="cb-box"></div><span class="cb-txt">Griha Pravesh Muhurat</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Education Muhurat"><div class="cb-box"></div><span class="cb-txt">Education Muhurat</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Agreement Muhurat"><div class="cb-box"></div><span class="cb-txt">Agreement Muhurat</span></div>
-        <!-- Prashna 91-100 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Prashna Basics"><div class="cb-box"></div><span class="cb-txt">Prashna Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Yes/No Predictions (Prashna)"><div class="cb-box"></div><span class="cb-txt">Yes/No Predictions</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Lost Object (Prashna)"><div class="cb-box"></div><span class="cb-txt">Lost Object (Prashna)</span></div>
@@ -417,6 +413,7 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <!-- TAROT & DIVINATION -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">🃏</span><span class="cat-hdr-title">Tarot & Divination</span><span class="cat-hdr-count">&nbsp;· 95 courses</span></div>
@@ -424,7 +421,6 @@ select option{background:#fff;color:var(--dark)}
     </div>
     <div class="cat-body">
       <div class="course-grid">
-        <!-- Tarot 1-20 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Tarot Card Meanings"><div class="cb-box"></div><span class="cb-txt">Card Meanings</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Tarot Beginner Spreads"><div class="cb-box"></div><span class="cb-txt">Beginner Spreads</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Love Tarot"><div class="cb-box"></div><span class="cb-txt">Love Tarot</span></div>
@@ -444,7 +440,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Advanced Tarot"><div class="cb-box"></div><span class="cb-txt">Advanced Tarot</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Tarot Business Setup"><div class="cb-box"></div><span class="cb-txt">Tarot Business Setup</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Tarot Mastery"><div class="cb-box"></div><span class="cb-txt">Tarot Mastery</span></div>
-        <!-- Runes 21-35 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Basics"><div class="cb-box"></div><span class="cb-txt">Rune Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Meanings"><div class="cb-box"></div><span class="cb-txt">Rune Meanings</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Casting"><div class="cb-box"></div><span class="cb-txt">Rune Casting</span></div>
@@ -460,7 +455,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Energy Work"><div class="cb-box"></div><span class="cb-txt">Rune Energy Work</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Intuition"><div class="cb-box"></div><span class="cb-txt">Rune Intuition</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Rune Mastery"><div class="cb-box"></div><span class="cb-txt">Rune Mastery</span></div>
-        <!-- Pendulum 36-50 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Pendulum Basics"><div class="cb-box"></div><span class="cb-txt">Pendulum Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Yes/No Dowsing"><div class="cb-box"></div><span class="cb-txt">Yes/No Dowsing</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Energy Detection"><div class="cb-box"></div><span class="cb-txt">Energy Detection</span></div>
@@ -475,7 +469,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Location Dowsing"><div class="cb-box"></div><span class="cb-txt">Location Dowsing</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Health Scanning (Dowsing)"><div class="cb-box"></div><span class="cb-txt">Health Scanning</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Dowsing Mastery"><div class="cb-box"></div><span class="cb-txt">Dowsing Mastery</span></div>
-        <!-- Psychic 51-70 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Intuition Activation"><div class="cb-box"></div><span class="cb-txt">Intuition Activation</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Third Eye Awakening"><div class="cb-box"></div><span class="cb-txt">Third Eye Awakening</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Psychic Development"><div class="cb-box"></div><span class="cb-txt">Psychic Development</span></div>
@@ -495,7 +488,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Intuition for Business"><div class="cb-box"></div><span class="cb-txt">Intuition for Business</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Intuition for Relationships"><div class="cb-box"></div><span class="cb-txt">Intuition for Relationships</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Psychic Mastery"><div class="cb-box"></div><span class="cb-txt">Psychic Mastery</span></div>
-        <!-- Divination Systems 76-100 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Coffee Reading"><div class="cb-box"></div><span class="cb-txt">Coffee Reading</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Tea Reading"><div class="cb-box"></div><span class="cb-txt">Tea Reading</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Dice Divination"><div class="cb-box"></div><span class="cb-txt">Dice Divination</span></div>
@@ -519,6 +511,7 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <!-- ENERGY & MANIFESTATION -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">🌀</span><span class="cat-hdr-title">Energy, Healing & Manifestation</span><span class="cat-hdr-count">&nbsp;· 54 courses</span></div>
@@ -526,7 +519,6 @@ select option{background:#fff;color:var(--dark)}
     </div>
     <div class="cat-body">
       <div class="course-grid">
-        <!-- Reiki 46-60 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Reiki Level 1"><div class="cb-box"></div><span class="cb-txt">Reiki Level 1</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Reiki Level 2"><div class="cb-box"></div><span class="cb-txt">Reiki Level 2</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Daily Reiki Practice"><div class="cb-box"></div><span class="cb-txt">Daily Reiki Practice</span></div>
@@ -542,7 +534,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Reiki Business"><div class="cb-box"></div><span class="cb-txt">Reiki Business</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Advanced Reiki"><div class="cb-box"></div><span class="cb-txt">Advanced Reiki</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Reiki Mastery"><div class="cb-box"></div><span class="cb-txt">Reiki Mastery</span></div>
-        <!-- Vastu 61-75 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Vastu Basics"><div class="cb-box"></div><span class="cb-txt">Vastu Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Home Vastu"><div class="cb-box"></div><span class="cb-txt">Home Vastu</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Office Vastu"><div class="cb-box"></div><span class="cb-txt">Office Vastu</span></div>
@@ -558,7 +549,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Vastu Case Studies"><div class="cb-box"></div><span class="cb-txt">Vastu Case Studies</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Advanced Vastu"><div class="cb-box"></div><span class="cb-txt">Advanced Vastu</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Vastu Mastery"><div class="cb-box"></div><span class="cb-txt">Vastu Mastery</span></div>
-        <!-- Energy & Manifestation 71-100 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Law of Attraction"><div class="cb-box"></div><span class="cb-txt">Law of Attraction</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Scripting"><div class="cb-box"></div><span class="cb-txt">Scripting</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="369 Method"><div class="cb-box"></div><span class="cb-txt">369 Method</span></div>
@@ -588,6 +578,7 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <!-- SPECIALISED TRACKS -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">📚</span><span class="cat-hdr-title">Specialised Tracks</span><span class="cat-hdr-count">&nbsp;· 33 courses</span></div>
@@ -595,14 +586,12 @@ select option{background:#fff;color:var(--dark)}
     </div>
     <div class="cat-body">
       <div class="course-grid">
-        <!-- Jaimini 1-15 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Track Basics"><div class="cb-box"></div><span class="cb-txt">Jaimini Track Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Karakas Deep Dive"><div class="cb-box"></div><span class="cb-txt">Karakas Deep Dive</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Argala (Jaimini)"><div class="cb-box"></div><span class="cb-txt">Argala (Jaimini)</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Remedies"><div class="cb-box"></div><span class="cb-txt">Jaimini Remedies</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini for Professionals"><div class="cb-box"></div><span class="cb-txt">Jaimini for Professionals</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Jaimini Certification"><div class="cb-box"></div><span class="cb-txt">Jaimini Certification</span></div>
-        <!-- Lal Kitab 16-30 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Lal Kitab Basics"><div class="cb-box"></div><span class="cb-txt">Lal Kitab Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Houses in Lal Kitab"><div class="cb-box"></div><span class="cb-txt">Houses in Lal Kitab</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Planets in Lal Kitab"><div class="cb-box"></div><span class="cb-txt">Planets in Lal Kitab</span></div>
@@ -616,7 +605,6 @@ select option{background:#fff;color:var(--dark)}
         <div class="cb-item"><input type="checkbox" name="courses" value="Lal Kitab Advanced Remedies"><div class="cb-box"></div><span class="cb-txt">Advanced Remedies (LK)</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Lal Kitab Ethics"><div class="cb-box"></div><span class="cb-txt">Lal Kitab Ethics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Lal Kitab Mastery"><div class="cb-box"></div><span class="cb-txt">Lal Kitab Mastery</span></div>
-        <!-- Numerology 31-45 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Numerology Basics"><div class="cb-box"></div><span class="cb-txt">Numerology Basics</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Mulank"><div class="cb-box"></div><span class="cb-txt">Mulank</span></div>
         <div class="cb-item"><input type="checkbox" name="courses" value="Bhagyank"><div class="cb-box"></div><span class="cb-txt">Bhagyank</span></div>
@@ -636,6 +624,7 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <!-- LOVE, RELATIONSHIPS & MARRIAGE -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">💞</span><span class="cat-hdr-title">Love, Relationships & Marriage</span><span class="cat-hdr-count">&nbsp;· 40 courses</span></div>
@@ -684,6 +673,7 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <!-- HEALTH & SPIRITUAL GROWTH -->
+
   <div class="cat-block">
     <div class="cat-hdr">
       <div class="cat-hdr-left"><span style="font-size:18px">🌿</span><span class="cat-hdr-title">Health, Wellbeing & Spiritual Growth</span><span class="cat-hdr-count">&nbsp;· 15 courses</span></div>
@@ -713,6 +703,7 @@ select option{background:#fff;color:var(--dark)}
 </div><!-- end courses card -->
 
 <!-- 3 · MESSAGE -->
+
 <div class="card">
   <div class="sec-head"><span class="ico">☾</span> Anything Else?</div>
   <div class="field">
@@ -731,6 +722,7 @@ select option{background:#fff;color:var(--dark)}
 </form>
 
 <!-- SUCCESS -->
+
 <div class="success" id="success">
   <div class="ico2"></div>
   <h2>Application Submitted!</h2>
@@ -742,9 +734,7 @@ select option{background:#fff;color:var(--dark)}
 <div class="toast" id="toast"></div>
 
 <script>
-// ─── REPLACE THIS with your deployed Google Apps Script Web App URL ───
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzcNPv86mD5R7q8lwVersF2byxfLd0P2d_0pTCwoKdUuIStWckWpHEfdwOe2OSMqYYM/exec';
-// ─────────────────────────────────────────────────────────────────────
 
 /* Accordions */
 document.querySelectorAll('.cat-hdr').forEach(h => {
@@ -819,7 +809,6 @@ document.getElementById('form').addEventListener('submit', async function(e) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    // no-cors means we can't read the response — assume success
     document.getElementById('form').style.display = 'none';
     document.getElementById('success').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -829,5 +818,6 @@ document.getElementById('form').addEventListener('submit', async function(e) {
   }
 });
 </script>
+
 </body>
 </html>
