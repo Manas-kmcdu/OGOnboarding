@@ -722,7 +722,7 @@ box-shadow:0 4px 24px rgba(114,17,198,.1);
     <label>Your Message / Questions
       <span class="sub-hint">Tell us about courses you would like to teach, your doubts, or anything you'd like us to know</span>
     </label>
-    <textarea name="message" placeholder="Share your doubts, or a brief intro..." rows="5"></textarea>
+    <textarea name="message" placeholder="Share your doubts, or something you would like us to know about yourself..." rows="5"></textarea>
   </div>
 </div>
 
@@ -808,7 +808,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
   }
 
   const btn = document.getElementById('submitBtn');
-  btn.disabled = true; btn.textContent = '⏳ Submitting...';
+  btn.disabled = true; btn.textContent = 'Submitting...';
 
   const payload = {
     full_name:    document.querySelector('[name=full_name]').value.trim(),
