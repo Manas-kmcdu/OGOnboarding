@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Occult Gurukul — Mentor Onboarding</title>
+<title>Occult Gurukul - Mentor Interest Form</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -70,7 +70,7 @@ body {
 .hdr-line::before,.hdr-line::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.3)}
 .hdr-line span{color:rgba(255,255,255,.6);font-size:14px}
 .hdr p {
-  font-size:15px; line-height:1.8; font-style:italic;
+  font-size:15px; line-height:1.8; font-style:normal;
   color:rgba(255,255,255,.88); position:relative;
 }
 .hdr .req-note {
@@ -115,7 +115,7 @@ label .r { color:var(--red); margin-left:2px; }
 label .sub-hint {
   display:block; font-family:'EB Garamond',serif;
   font-size:12.5px; color:var(--hint);
-  font-style:italic; margin-top:2px;
+  font-style:normal; margin-top:2px;
   letter-spacing:0; font-weight:400;
 }
 
@@ -152,7 +152,7 @@ select option{background:#fff;color:var(--dark)}
 .cat-hdr:hover{background:#faeea5}
 .cat-hdr-left { display:flex; align-items:center; gap:8px; }
 .cat-hdr-title { font-family:'Cinzel',serif; font-size:11.5px; color:var(--dark); letter-spacing:.05em; }
-.cat-hdr-count { font-family:'EB Garamond',serif; font-size:12px; color:var(--hint); font-style:italic; }
+.cat-hdr-count { font-family:'EB Garamond',serif; font-size:12px; color:var(--hint); font-style:normal; }
 .cat-arrow { color:var(--m); font-size:11px; transition:transform .25s; }
 .cat-block.open .cat-arrow { transform:rotate(180deg); }
 .cat-body { display:none; padding:6px 14px 14px; background:#fff; border-top:1px solid #f0e498; }
@@ -222,7 +222,7 @@ select option{background:#fff;color:var(--dark)}
 .success .s-line{display:flex;align-items:center;gap:10px;margin:14px 0}
 .success .s-line::before,.success .s-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--m-mid),transparent)}
 .success .s-line span{color:var(--m)}
-.success p{color:var(--mid);font-size:16px;line-height:1.8;font-style:italic}
+.success p{color:var(--mid);font-size:16px;line-height:1.8;font-style:normal}
 </style>
 </head>
 <body>
@@ -230,11 +230,11 @@ select option{background:#fff;color:var(--dark)}
 
 <!-- HEADER -->
 <div class="hdr">
-  <span class="hdr-icon">🔮</span>
+  <span class="hdr-icon"></span>
   <h1>Occult Gurukul</h1>
   <div class="sub">Mentor Onboarding</div>
-  <div class="hdr-line"><span>✦</span></div>
-  <p>We're inviting experienced practitioners to record courses for our platform. Fill in your details, pick the topics you can teach, and we'll be in touch.</p>
+  <div class="hdr-line"><span></span></div>
+  <p>We're inviting Occult practitioners to record courses for our platform. Fill in your details, pick the topics you can teach, and we'll be in touch.</p>
   <div class="req-note"><b>*</b> Required fields</div>
   <div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
 </div>
@@ -280,8 +280,16 @@ select option{background:#fff;color:var(--dark)}
   </div>
 
   <div class="field">
-    <label>Your Social / Website Link
-      <span class="sub-hint">Instagram, YouTube, or personal site — so we can see your work</span>
+    <label>Your Social / Portfolio Link
+      <span class="sub-hint">Instagram, YouTube, or personal site - so we can see your work</span>
+    </label>
+    <input type="text" name="social_link" placeholder="https://...">
+  </div>
+</div>
+
+    <div class="field">
+    <label>How do you want to record your course(s)?
+      <span class="sub-hint">Online or from our studio (in Noida)</span>
     </label>
     <input type="text" name="social_link" placeholder="https://...">
   </div>
@@ -289,10 +297,10 @@ select option{background:#fff;color:var(--dark)}
 
 <!-- 2 · COURSES -->
 <div class="card">
-  <div class="sec-head"><span class="ico">✦</span> Which Courses Can You Teach?
-    <span style="margin-left:auto;font-family:'EB Garamond',serif;font-size:12px;color:var(--hint);font-style:italic;font-weight:400;letter-spacing:0;text-transform:none;">Select all that apply</span>
+  <div class="sec-head"><span class="ico"></span> Which Courses Can You Teach?
+    <span style="margin-left:auto;font-family:'EB Garamond',serif;font-size:12px;color:var(--hint);font-style:normal;font-weight:400;letter-spacing:0;text-transform:none;">Select all that apply</span>
   </div>
-  <p style="font-size:14px;color:var(--soft);font-style:italic;margin-bottom:16px;">Tap a category to expand it, then tick every topic you're confident teaching.</p>
+  <p style="font-size:14px;color:var(--soft);font-style:normal;margin-bottom:16px;">Tap a category to expand it, then tick every topic you're confident teaching.</p>
 
   <!-- PURE ASTROLOGY -->
   <div class="cat-block">
@@ -301,7 +309,7 @@ select option{background:#fff;color:var(--dark)}
       <span class="cat-arrow">▾</span>
     </div>
     <div class="cat-body">
-      <p style="font-size:12px;color:var(--hint);font-style:italic;margin-bottom:4px;">Foundations · Chart Reading · Dashas · Divisional Charts · Jaimini · Yogas & Doshas · Muhurat · Prashna</p>
+      <p style="font-size:12px;color:var(--hint);font-style:normal;margin-bottom:4px;">Foundations · Chart Reading · Dashas · Divisional Charts · Jaimini · Yogas & Doshas · Muhurat · Prashna</p>
       <div class="course-grid">
         <!-- Foundations 1–15 -->
         <div class="cb-item"><input type="checkbox" name="courses" value="Astrology Basics"><div class="cb-box"></div><span class="cb-txt">Astrology Basics</span></div>
