@@ -88,7 +88,7 @@ color:rgba(255,255,255,.6); position:relative;
 
 /* ── CARDS ── */
 .card {
-background:var(–white);
+background: var(–white);
 border:1px solid rgba(114,17,198,.13);
 border-top:none;
 padding:30px 36px;
@@ -99,7 +99,7 @@ box-shadow:0 2px 10px rgba(114,17,198,.08);
 .sec-head {
 font-family:‘Cinzel’,serif; font-size:10.5px;
 letter-spacing:.28em; text-transform:uppercase;
-color:var(–m); margin-bottom:22px;
+color: var(–m); margin-bottom:22px;
 padding-bottom:9px;
 border-bottom:1.5px solid var(–border);
 display:flex; align-items:center; gap:8px;
@@ -110,13 +110,13 @@ display:flex; align-items:center; gap:8px;
 .field { margin-bottom:22px; }
 label {
 display:block; font-family:‘Cinzel’,serif;
-font-size:12.5px; color:var(–dark);
+font-size:12.5px; color: var(–dark);
 margin-bottom:8px; letter-spacing:.02em;
 }
-label .r { color:var(–red); margin-left:2px; }
+label .r { color: var(–red); margin-left:2px; }
 label .sub-hint {
 display:block; font-family:‘EB Garamond’,serif;
-font-size:12.5px; color:var(–hint);
+font-size:12.5px; color: var(–hint);
 font-style:normal; margin-top:2px;
 letter-spacing:0; font-weight:400;
 }
@@ -125,14 +125,14 @@ letter-spacing:0; font-weight:400;
 @media(max-width:540px){ .two{grid-template-columns:1fr} }
 
 input[type=text],input[type=email],input[type=tel],textarea,select {
-width:100%; background:var(–off);
+width:100%; background: var(–off);
 border:1.5px solid var(–border); border-radius:4px;
-color:var(–dark); font-family:‘EB Garamond’,serif;
+color: var(–dark); font-family:‘EB Garamond’,serif;
 font-size:16px; padding:10px 14px; outline:none;
 transition:border-color .2s, box-shadow .2s, background .2s;
 }
 input:focus,textarea:focus,select:focus {
-border-color:var(–m); background:#fff;
+border-color: var(–m); background:#fff;
 box-shadow:0 0 0 3px rgba(114,17,198,.15);
 }
 input::placeholder,textarea::placeholder { color:#9B6FCC; }
@@ -142,7 +142,7 @@ appearance:none; cursor:pointer;
 background-image:url(“data:image/svg+xml,%3Csvg width=‘11’ height=‘7’ viewBox=‘0 0 11 7’ fill=‘none’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cpath d=‘M1 1L5.5 6L10 1’ stroke=’%237211C6’ stroke-width=‘1.6’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
 background-repeat:no-repeat; background-position:right 13px center; padding-right:36px;
 }
-select option{background:#fff;color:var(–dark)}
+select option{background:#fff;color: var(–dark)}
 
 /* ── CATEGORY ACCORDION ── */
 .cat-block { border:1.5px solid #C078F0; border-radius:5px; margin-bottom:9px; overflow:hidden; }
@@ -153,9 +153,9 @@ background:#EAD5FA; transition:background .15s; user-select:none;
 }
 .cat-hdr:hover { background:#D4A8F5; }
 .cat-hdr-left { display:flex; align-items:center; gap:8px; }
-.cat-hdr-title { font-family:‘Cinzel’,serif; font-size:11.5px; color:var(–dark); letter-spacing:.05em; }
-.cat-hdr-count { font-family:‘EB Garamond’,serif; font-size:12px; color:var(–hint); font-style:normal; }
-.cat-arrow { color:var(–m); font-size:11px; transition:transform .25s; }
+.cat-hdr-title { font-family:‘Cinzel’,serif; font-size:11.5px; color: var(–dark); letter-spacing:.05em; }
+.cat-hdr-count { font-family:‘EB Garamond’,serif; font-size:12px; color: var(–hint); font-style:normal; }
+.cat-arrow { color: var(–m); font-size:11px; transition:transform .25s; }
 .cat-block.open .cat-arrow { transform:rotate(180deg); }
 .cat-body { display:none; padding:6px 14px 14px; background:#fff; border-top:1px solid #C078F0; }
 .cat-block.open .cat-body { display:block; }
@@ -169,20 +169,32 @@ gap:6px; margin-top:8px;
 .cb-item {
 display:flex; align-items:flex-start; gap:9px;
 padding:8px 11px; border:1.5px solid #C8A8F0; border-radius:4px;
-cursor:pointer; transition:all .15s; background:var(–off); user-select:none;
+cursor:pointer; transition:all .15s; background: var(–off); user-select:none;
 }
-.cb-item:hover { border-color:var(–m2); background:#EAD5FA; }
-.cb-item.on { border-color:var(–m); background:#EAD5FA; }
-.cb-item input{display:none}
+.cb-item:hover { border-color: var(–m2); background:#EAD5FA; }
+.cb-item.on { border-color: var(–m); background:#EAD5FA; }
+.cb-item input { display:none; }
 .cb-box {
-width:16px;height:16px;min-width:16px;
+width:16px; height:16px; min-width:16px;
 border:1.5px solid #9B3FE8; border-radius:3px;
-display:flex;align-items:center;justify-content:center;
-font-size:10px;font-weight:700;color:#fff;
+display:flex; align-items:center; justify-content:center;
+font-size:11px; font-weight:900; color:#fff; line-height:1;
 background:#fff; margin-top:2px; transition:all .15s;
+flex-shrink: 0;
 }
-.cb-item.on .cb-box { background:var(–m); border-color:var(–m); }
-.cb-txt { font-family:‘EB Garamond’,serif; font-size:14.5px; color:var(–mid); line-height:1.35; }
+.cb-item.on .cb-box {
+background: var(–m);
+border-color: var(–m);
+}
+/* Tick via CSS — no JS text needed */
+.cb-item.on .cb-box::after {
+content: ‘✓’;
+color: #fff;
+font-size: 11px;
+font-weight: 900;
+line-height: 1;
+}
+.cb-txt { font-family:‘EB Garamond’,serif; font-size:14.5px; color: var(–mid); line-height:1.35; }
 
 /* ── SUBMIT ── */
 .submit-area { text-align:center; padding:32px 0 12px; }
@@ -198,13 +210,13 @@ transition:all .25s;
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(114,17,198,.5)}
 .btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.form-foot { font-family:‘Cinzel’,serif; font-size:10px; letter-spacing:.15em; color:var(–hint); margin-top:10px; }
+.form-foot { font-family:‘Cinzel’,serif; font-size:10px; letter-spacing:.15em; color: var(–hint); margin-top:10px; }
 
 /* ── TOAST ── */
 .toast {
 position:fixed;bottom:28px;left:50%;
 transform:translateX(-50%) translateY(70px);
-background:var(–dark);color:#fff;
+background: var(–dark);color:#fff;
 font-family:‘Cinzel’,serif;font-size:11.5px;letter-spacing:.08em;
 padding:11px 26px;border-radius:4px;
 box-shadow:0 8px 24px rgba(0,0,0,.2);
@@ -215,16 +227,16 @@ z-index:9999;opacity:0;transition:all .3s ease;
 /* ── SUCCESS ── */
 .success {
 display:none;text-align:center;
-padding:64px 36px;background:var(–white);
+padding:64px 36px;background: var(–white);
 border:1.5px solid var(–m-mid);border-radius:8px;
 box-shadow:0 4px 24px rgba(114,17,198,.1);
 }
 .success .ico2{font-size:60px;margin-bottom:16px;animation:bob 4s ease-in-out infinite alternate}
-.success h2{font-family:‘Cinzel Decorative’,cursive;color:var(–m);font-size:21px;margin-bottom:10px}
+.success h2{font-family:‘Cinzel Decorative’,cursive;color: var(–m);font-size:21px;margin-bottom:10px}
 .success .s-line{display:flex;align-items:center;gap:10px;margin:14px 0}
 .success .s-line::before,.success .s-line::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,transparent,var(–m-mid),transparent)}
-.success .s-line span{color:var(–m)}
-.success p{color:var(–mid);font-size:16px;line-height:1.8;font-style:normal}
+.success .s-line span{color: var(–m)}
+.success p{color: var(–mid);font-size:16px;line-height:1.8;font-style:normal}
 </style>
 
 </head>
@@ -237,7 +249,7 @@ box-shadow:0 4px 24px rgba(114,17,198,.1);
   <span class="hdr-icon"></span>
   <h1>Occult Gurukul</h1>
   <div class="sub">Mentor Interest Form</div>
-  <div class="hdr-line"><span></span></div>
+  <div class="hdr-line"><span>✦</span></div>
   <p>We're inviting Occult practitioners to record courses for our platform. Fill in your details, pick the topics you can teach, and we'll be in touch.</p>
   <div class="req-note"><b>*</b> Required fields</div>
   <div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
@@ -288,14 +300,14 @@ box-shadow:0 4px 24px rgba(114,17,198,.1);
     <label>How would you like to record your course?
       <span class="sub-hint">Would you be more comfortable recording online from your own setup, or coming to our studio?</span>
     </label>
-    <input type="text" name="social_link" placeholder="Online/Offline">
+    <input type="text" name="social_link" placeholder="Online / Offline">
   </div>
 </div>
 
 <!-- 2 · COURSES -->
 
 <div class="card">
-  <div class="sec-head"><span class="ico"></span> Which Courses Can You Teach?
+  <div class="sec-head"><span class="ico">🌟</span> Which Courses Can You Teach?
     <span style="margin-left:auto;font-family:'EB Garamond',serif;font-size:12px;color:var(--hint);font-style:normal;font-weight:400;letter-spacing:0;text-transform:none;">Select all that apply</span>
   </div>
   <p style="font-size:14px;color:var(--soft);font-style:normal;margin-bottom:16px;">Tap a category to expand it, then tick every topic you're confident teaching.</p>
@@ -724,7 +736,7 @@ box-shadow:0 4px 24px rgba(114,17,198,.1);
 <!-- SUCCESS -->
 
 <div class="success" id="success">
-  <div class="ico2"></div>
+  <div class="ico2">✨</div>
   <h2>Application Submitted!</h2>
   <div class="s-line"><span>✦</span></div>
   <p>Thank you for applying to Occult Gurukul.<br>We'll review your details and reach out within 3-5 working days.</p>
@@ -745,14 +757,12 @@ document.querySelectorAll('.cat-hdr').forEach(h => {
   });
 });
 
-/* Checkboxes */
+/* Checkboxes — tick handled purely by CSS ::after, no textContent needed */
 document.querySelectorAll('.cb-item').forEach(item => {
   item.addEventListener('click', () => {
     item.classList.toggle('on');
     const cb = item.querySelector('input[type=checkbox]');
     if (cb) cb.checked = item.classList.contains('on');
-    const box = item.querySelector('.cb-box');
-    box.textContent = item.classList.contains('on') ? '✓' : '';
     updateProgress();
   });
 });
@@ -760,10 +770,16 @@ document.querySelectorAll('.cb-item').forEach(item => {
 /* Progress */
 function updateProgress() {
   const fields = ['full_name','email','phone','location','experience'];
-  const filled = fields.filter(n => { const e = document.querySelector(`[name="${n}"]`); return e && e.value.trim(); }).length;
+  const filled = fields.filter(n => {
+    const e = document.querySelector(`[name="${n}"]`);
+    return e && e.value.trim();
+  }).length;
   document.getElementById('prog').style.width = Math.min(100, Math.round(filled / fields.length * 100)) + '%';
 }
-document.querySelectorAll('input,textarea,select').forEach(el => { el.addEventListener('input', updateProgress); el.addEventListener('change', updateProgress); });
+document.querySelectorAll('input,textarea,select').forEach(el => {
+  el.addEventListener('input', updateProgress);
+  el.addEventListener('change', updateProgress);
+});
 
 /* Toast */
 function toast(msg, ms=4000) {
@@ -774,14 +790,18 @@ function toast(msg, ms=4000) {
 
 /* Collect selected courses */
 function getCourses() {
-  return Array.from(document.querySelectorAll('input[name="courses"]:checked')).map(c => c.value).join(', ') || 'None selected';
+  return Array.from(document.querySelectorAll('input[name="courses"]:checked'))
+    .map(c => c.value).join(', ') || 'None selected';
 }
 
 /* Submit */
 document.getElementById('form').addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const req = { full_name:'Full Name', email:'Email Address', phone:'WhatsApp Number', location:'City & State', experience:'Years of Practice' };
+  const req = {
+    full_name: 'Full Name', email: 'Email Address',
+    phone: 'WhatsApp Number', location: 'City & State', experience: 'Years of Practice'
+  };
   for (const [name, label] of Object.entries(req)) {
     const el = document.querySelector(`[name="${name}"]`);
     if (!el || !el.value.trim()) { toast(`⚠ Please fill in: ${label}`); el && el.focus(); return; }
@@ -791,22 +811,20 @@ document.getElementById('form').addEventListener('submit', async function(e) {
   btn.disabled = true; btn.textContent = '⏳ Submitting...';
 
   const payload = {
-    full_name:   document.querySelector('[name=full_name]').value.trim(),
-    email:       document.querySelector('[name=email]').value.trim(),
-    phone:       document.querySelector('[name=phone]').value.trim(),
-    location:    document.querySelector('[name=location]').value.trim(),
-    experience:  document.querySelector('[name=experience]').value.trim(),
-    social_link: document.querySelector('[name=social_link]').value.trim(),
-    courses:     getCourses(),
-    message:     document.querySelector('[name=message]').value.trim(),
+    full_name:    document.querySelector('[name=full_name]').value.trim(),
+    email:        document.querySelector('[name=email]').value.trim(),
+    phone:        document.querySelector('[name=phone]').value.trim(),
+    location:     document.querySelector('[name=location]').value.trim(),
+    experience:   document.querySelector('[name=experience]').value.trim(),
+    social_link:  document.querySelector('[name=social_link]').value.trim(),
+    courses:      getCourses(),
+    message:      document.querySelector('[name=message]').value.trim(),
     submitted_at: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
   };
-  
 
   try {
     await fetch(SHEET_URL, {
-      method: 'POST',
-      mode: 'no-cors',
+      method: 'POST', mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
@@ -815,7 +833,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } catch {
     toast('✗ Network error — please check your connection and try again.', 6000);
-    btn.disabled = false; btn.textContent = '✦ Submit Application ✦';
+    btn.disabled = false; btn.textContent = 'Submit Application';
   }
 });
 </script>
